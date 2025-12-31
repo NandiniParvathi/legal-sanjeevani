@@ -217,9 +217,7 @@ Answer concisely and factually.
 
 
 answer = legal_rag_query(query_input,case_id_input)
-    query=query_input,
-    case_id=case_id_input
-)
+   
 
 print(answer)
 
