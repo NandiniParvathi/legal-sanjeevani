@@ -1,13 +1,10 @@
-
-
+from dotenv import load_dotenv
 import os
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
-
-
 from openai import OpenAI
 
-client = OpenAI()
+load_dotenv()  # Loads variables from .env
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 response = client.chat.completions.create(
     model="gpt-4o-mini",
